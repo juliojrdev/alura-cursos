@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluGames</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="body">
+    <main class="container main">
+        <img src="img/logo.svg" alt="Logo AluGames">
+        <section class="divisor">
+            <div class="divisor__line"></div>
+            <img src="img/fade_bar.svg" alt="Visual bar" class="divisor__bar">
+            <div class="divisor__line"></div>
+        </section>
+        <h1 class="page-title">Aluguel de <span class="page-title__emphasis">boardgames</span></h1> <!-- titulo pagina -->
+
+        <section class="dashboard">
+            <ul class="dashboard__items"> <!-- lista de jogos disponiveis -->
+                <!-- jogo 1 da lista -->
+                <li class="dashboard__items__item" id="game-1"> 
+                    <div class="dashboard__item__img"> <!-- div contem imagem 1 -->
+                        <img src="img/monopoly.png" alt="Capa jogo Monopoly"> <!-- tag e link imagem 1 -->
+                    </div>
+                    <p class="dashboard__item__name">Monopoly</p> <!-- nome do jogo 1 -->
+                    <a onclick="alterarStatus(1)" href="#" class="dashboard__item__button">Alugar</a> <!-- botao alugar devolver jogo 1 -->
+                </li>
+
+                <!-- jogo 2 da lista -->
+                <li class="dashboard__items__item" id="game-2">
+                    <div class="dashboard__item__img"> <!-- div contem imagem 2 -->
+                        <img src="img/ticket_to_ride.png" alt="Capa jogo Ticket to Ride"> <!-- tag e link imagem 1 -->
+                    </div>
+                    <p class="dashboard__item__name">Ticket to Ride</p> <!-- nome do jogo 2 -->
+                    <a onclick="alterarStatus(2)" href="#" class="dashboard__item__button">Alugar</a> <!-- botao alugar devolver jogo 2 -->
+                </li>
+
+                <!-- jogo 3 da lista -->
+                <li class="dashboard__items__item" id="game-3">
+                    <div class="dashboard__item__img dashboard__item__img--rented"> <!-- div contem imagem 3 -->
+                        <img src="img/takenoko.png" alt="Capa jogo Takenoko"> <!-- tag e link imagem 1 -->
+                    </div>
+
+                    <p class="dashboard__item__name">Takenoko</p> <!-- nome do jogo 3 -->
+                    <a onclick="alterarStatus(3)" href="#" class="dashboard__item__button dashboard__item__button--return">Devolver</a> <!-- botao alugar devolver jogo 3 -->
+                </li>
+            </ul>
+        </section>
+        <img src="img/hachuras.svg" alt="Visual hachuras" class="hachuras">
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
