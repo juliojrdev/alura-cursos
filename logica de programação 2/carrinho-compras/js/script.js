@@ -1,7 +1,17 @@
 let carrinho = document.querySelector('section.carrinho__produtos__produto');
 
 let valorTotalCompra = 0;
+/*
+1 array para o value da select/option onde tme o valor
+1 array para o textcontent da select/option onde tme o nome do prduto + funçã para limpar nome
+1 array para guardar a quantidade de intens selecionados no input#quantidade
+1 array pra guardar valor total do item
 
+1 variavel com soma total da compra
+
+
+imprime tudo usando um loop for i < arrays.lenght
+*/
 
 function adicionar(){   
     carrinho.innerHTML = '';  
