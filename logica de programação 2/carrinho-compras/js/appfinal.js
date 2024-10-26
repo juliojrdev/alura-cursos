@@ -1,10 +1,9 @@
-
 let listaProdutosCarrinho = [];
 let listaValorProdutosCarrinho = [];
 mostrarBotaoLimpar();
 
 function limpar(){
-    let confirma = confirm('[ ! ] Tem certeza que você deseja remover TODO OS PRODUTOS do carrinho de compras?')
+    let confirma = confirm('[ ! ] Você tem certeza que deseja limpar todos os produtos do carrinho?')
     if(confirma === true){
         listaProdutosCarrinho = [];
         listaValorProdutosCarrinho = [];
@@ -18,25 +17,9 @@ function limpar(){
 function adicionar(){    
     let selectProduto = document.getElementById('produto');
     let optionSelecionada = selectProduto.options[selectProduto.selectedIndex];
-
-    //console.log(optionSelecionada); // teste de impressão
-
     let valorProduto = parseFloat(optionSelecionada.value);
-
-    //console.log(valorProduto); // teste de impressão
-
     let nomeProduto = optionSelecionada.text.split(' - ');
-
-    //console.log(nomeProduto[0]); // teste de impressão
-    //console.log(nomeProduto[1]); // teste de impressão
-
     let quantidade = parseInt(document.getElementById('quantidade').value);
-
-    //console.log(quantidade); // teste de impressão
-
-    //console.log(`${quantidade}x ${nomeProduto[0]} - ${nomeProduto[1]}`) // teste de impressão
-    //let valorTotalProdutoSelecionado = quantidade * valorProduto; // teste de calculo e processamento
-    //console.log(`${valorTotalProdutoSelecionado}`) // teste de impressão
 
     if(!valorProduto){
         window.alert('[ ! ] Escolha um produto para adicionar ao carrinho.');
@@ -44,9 +27,6 @@ function adicionar(){
         window.alert(`[ ! ] Informe a quantidade do produto "${nomeProduto[0]}" que deseja adicionar ao carrinho.`);
     }else{
         adicionarNoCarrinho(quantidade, nomeProduto[0], nomeProduto[1], valorProduto);
-    //console.log(listaProdutosCarrinho); // teste de impressão
-    //console.log(listaValorProdutosCarrinho); // teste de impressão
-    //console.log(valorTotalCompraNoCarrinho()); // teste de impressão
     
     mostraProdutosNoCarrinho();
     mostrarValorTotalProdutosCarrinho();
@@ -101,3 +81,19 @@ function mostrarBotaoLimpar() {
         botaoLimpar.style.display = "block";
     }
 }
+
+/* ÁREA DE COMENTÁRIOS E TESTES DE IMPRESSÃO PARA VALIDAR FUNÇÕES */
+
+//console.log(listaProdutosCarrinho); // teste de impressão
+//console.log(listaValorProdutosCarrinho); // teste de impressão 
+//console.log(valorTotalCompraNoCarrinho()); // teste de impressão
+//console.log(quantidade); // teste de impressão
+//console.log(`${quantidade}x ${nomeProduto[0]} - ${nomeProduto[1]}`) // teste de impressão
+//let valorTotalProdutoSelecionado = quantidade * valorProduto; // teste de calculo e processamento
+//console.log(`${valorTotalProdutoSelecionado}`) // teste de impressão
+//console.log(nomeProduto[0]); // teste de impressão
+//console.log(nomeProduto[1]); // teste de impressão
+//console.log(valorProduto); // teste de impressão
+//console.log(optionSelecionada); // teste de impressão
+
+/* FIM DA ÁREA DE TESTES E COMENTÁRIOS */
