@@ -8,36 +8,35 @@ function limpar(){
 
     mostraProdutosNoCarrinho();
     mostrarValorTotalProdutosCarrinho();
-
 }
 
 function adicionar(){
     let selectProduto = document.getElementById('produto');
     let optionSelecionada = selectProduto.options[selectProduto.selectedIndex];
 
-    //console.log(optionSelecionada);
+    //console.log(optionSelecionada); // teste de impressão
 
     let valorProduto = parseFloat(optionSelecionada.value);
 
-    //console.log(valorProduto)
+    //console.log(valorProduto); // teste de impressão
 
     let nomeProduto = optionSelecionada.text.split(' - ');
 
-    //console.log(nomeProduto[0]);
-    //console.log(nomeProduto[1]);
+    //console.log(nomeProduto[0]); // teste de impressão
+    //console.log(nomeProduto[1]); // teste de impressão
 
     let quantidade = parseInt(document.getElementById('quantidade').value);
 
-    //console.log(quantidade);
+    //console.log(quantidade); // teste de impressão
 
-    //console.log(`${quantidade}x ${nomeProduto[0]} - ${nomeProduto[1]}`)
-    //let valorTotalProdutoSelecionado = quantidade * valorProduto;
-    //console.log(`${valorTotalProdutoSelecionado}`)
+    //console.log(`${quantidade}x ${nomeProduto[0]} - ${nomeProduto[1]}`) // teste de impressão
+    //let valorTotalProdutoSelecionado = quantidade * valorProduto; // teste de calculo e processamento
+    //console.log(`${valorTotalProdutoSelecionado}`) // teste de impressão
 
     adicionarNoCarrinho(quantidade, nomeProduto[0], nomeProduto[1], valorProduto);
-    //console.log(listaProdutosCarrinho);
-    //console.log(listaValorProdutosCarrinho);
-    //console.log(valorTotalCompraNoCarrinho());
+    //console.log(listaProdutosCarrinho); // teste de impressão
+    //console.log(listaValorProdutosCarrinho); // teste de impressão
+    //console.log(valorTotalCompraNoCarrinho()); // teste de impressão
     
     mostraProdutosNoCarrinho();
     mostrarValorTotalProdutosCarrinho();
