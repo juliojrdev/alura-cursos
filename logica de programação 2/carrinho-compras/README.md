@@ -29,4 +29,4 @@ Para o desenvolvimento e arquitetura do código, foi utilizado o *paradigma de p
 
 ---
 
-Sinta-se à vontade para explorar, contribuir e fazer sugestões. Estou sempre aberto a feedbacks! 😊
+Sinta-se à vontade para explorar, contribuir e fazer sugestões. Estou aguardando seus feedbacks!
