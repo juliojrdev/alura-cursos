@@ -1,6 +1,6 @@
 let carrinho = document.querySelector('section.carrinho__produtos__produto');
 
-let valorTotalCompra = 0;
+
 /*
 1 array para o value da select/option onde tme o valor
 1 array para o textcontent da select/option onde tme o nome do prduto + funçã para limpar nome
